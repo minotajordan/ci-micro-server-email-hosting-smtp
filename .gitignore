@@ -12,6 +12,15 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 #codeigniter 3
 application/logs/*
+writable/*
+writable
+system/*
+system
+LICENSE
+README.md
+composer.json
+.env
+env
 !application/logs/index.html
 !application/logs/.htaccess
 /vendor/
