@@ -32,6 +32,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/send', 'Home::send');
+$routes->get('/create-token', 'Home::create_token');
+$routes->get('/demo_js', 'Home::demo_js');
+$routes->post('/api-send', 'Home::api_send');
+$routes->post('/generate-token', 'Home::generate_token');
 $routes->post('/api-send-email-basic', 'Home::send');
 
 

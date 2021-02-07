@@ -35,10 +35,9 @@ class SystemModel extends Model {
         return $query;
     }
 
-    function getUser ($password, $email){
-        $query = $this->db->query('SELECT * FROM user where email = "'.$email.'" limit 1');
-        $data = $query->getResultArray();
-        return $data;
+    function getValidateToken($token_public, $email){
+        $query = $this->db->query('SELECT * FROM afiliate WHERE token_public = "'.$token_public.'" AND config_email = "'.$email.'"');
+        return $query;
     }
 
     function getStructure ($table = ''){

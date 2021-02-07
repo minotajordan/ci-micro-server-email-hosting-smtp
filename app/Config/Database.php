@@ -34,7 +34,7 @@ class Database extends \CodeIgniter\Database\Config
 		'DSN'      => '',
 		'hostname' => (ENVIRONMENT),
 		'username' => (ENVIRONMENT),
-		'password' => 'root',
+		'password' => (ENVIRONMENT),
 		'database' => (ENVIRONMENT),
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
