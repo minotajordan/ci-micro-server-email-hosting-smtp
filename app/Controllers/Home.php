@@ -96,9 +96,7 @@ class Home extends BaseController
       $return_data['status']            = 200;
       $return_data['mesagge']           = 'Token deneg';
       echo json_encode($return_data);
-    }
-    // $data['dec_token_public'] = dec($data['token_public'],$data['token_private']);
-    
+    }    
   }
   
   public function send()
