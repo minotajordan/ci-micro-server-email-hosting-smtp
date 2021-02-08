@@ -4,7 +4,7 @@ use CodeIgniter\Libraries;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-class PHPMailer_Lib {
+class PhpmailerLib {
 
     public function load(){    
         $mail = new PHPMailer;
