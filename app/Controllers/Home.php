@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use \App\Models\SystemModel;
-use App\Libraries\PHPMailer_Lib;
+use App\Libraries\PhpmailerLib;
 use App\Helpers\Login_Helper;
 use \Config\Services;
 use \Config\Encryption;
@@ -22,7 +22,7 @@ class Home extends BaseController
   public function __construct()
   {
     $this->libmin = new SystemModel();
-    $this->PHPMailer = new PHPMailer_Lib();
+    $this->PHPMailer = new PhpmailerLib();
     $this->request = service('request');
     $this->system = new SystemModel();
     $this->session = Services::session();
@@ -62,7 +62,7 @@ class Home extends BaseController
     $query = $query->getResultArray();
     $data_sql['token'] = 'deng';
     foreach ($query as $row) {
-      if (($data['config_user'] === $row['config_email']) && ($data['token_public'] === $row['data_token_public'])) {
+      if (($data['config_user'] === $row['config_email']) && ($data['data_token_public'] === $row['token_public'])) {
         $data_sql['token'] = 'success';
         return $this->sendBacis($row, $data);
       }
